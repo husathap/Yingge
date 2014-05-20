@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../../core/room.h"
-#include "../../global.h"
+#include "../core/room.h"
+#include "../global.h"
 //#include "rm2.h"
-#include "../sceneNavigation.h"
-#include "../../lang/cs.h"
-#include "../../lang/rm.h"
+#include "../core/sceneNavigation.h"
+#include "../lang/cs.h"
+#include "../lang/rm.h"
 
 CUTSCENE(Nenshi) 
 	$$NO_CONSTRUCT

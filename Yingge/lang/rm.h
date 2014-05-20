@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../game/sceneNavigation.h"
+#include "../core/sceneNavigation.h"
 #include "../core/room.h"
 #include "common.h"
 

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../../core/room.h"
+#include "../core/room.h"
 #include "rm1.h"
-#include "../../global.h"
+#include "../global.h"
 
 class rm2 : public yingge::Room
 {
@@ -13,7 +13,7 @@ private:
 
 	void toRoom1()
 	{
-		yingge::sceneManager->replaceScenes(getScene("rm1"));
+		yingge::sceneManager->replaceScenes(yingge::getScene("rm1"));
 	}
 
 	void toRoom2()

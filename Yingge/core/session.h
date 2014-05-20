@@ -11,6 +11,7 @@ namespace yingge
 	public:
 		std::string sceneName;
 		std::string savedDateTime;
+
 		std::map<std::string, std::string> strings;
 		std::map<std::string, double> numbers;
 		std::map<std::string, bool> booleans;

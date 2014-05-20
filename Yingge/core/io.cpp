@@ -2,7 +2,7 @@
 #include "../global.h"
 #include "../setting.h"
 #include "jsoncons/json.hpp"
-#include "../game/sceneNavigation.h"
+#include "../core/sceneNavigation.h"
 #include <fstream>
 #include <ctime>
 #include <time.h>

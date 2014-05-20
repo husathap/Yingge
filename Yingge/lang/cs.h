@@ -8,7 +8,7 @@
  * you won't need need to include cutscene and sceneNavigation.
  */
 #include "../core/cutscene.h"
-#include "../game/sceneNavigation.h"
+#include "../core/sceneNavigation.h"
 #include "common.h"
 
 // Here is the content of the language itself for defining a cutscene.
@@ -48,7 +48,7 @@
 #define STOP_MUSIC stopMusic();
 
 #define NAVIGATE_TITLE navigateFirst();
-#define NAVIGATE(s) navigate(getScene(#s));
+#define NAVIGATE(s) navigate(yingge::getScene(#s));
 
 // Here are keywords that are only for enhancing readability.
 #define iANSWERS

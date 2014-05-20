@@ -10,7 +10,7 @@
 
 //#include <SFML/Graphics.hpp>
 #include "global.h"
-#include "game/scenes/first.h"
+#include "scenes/first.h"
 #include "core/io.h"
 #include "setting.h"
 
@@ -20,8 +20,6 @@ int main()
 {
 
 	sf::RenderWindow window(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "SFML works!");
-	//sf::CircleShape shape(100.f);
-	//shape.setFillColor(sf::Color::Green);
 
 	defaultFont = new sf::Font();
 	defaultFont->loadFromFile("resources/fonts/default.ttf");
@@ -33,7 +31,6 @@ int main()
 
 	sceneManager = SceneManager::getInstance();
 	sceneManager->overlayScene(new First());
-	//sceneManager->overlayScene(new yingge::IO(false));
 
 	session = new Session();
 

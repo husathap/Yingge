@@ -1,5 +1,5 @@
 #include "cutscene.h"
-#include "../game/scenes/first.h"
+#include "../scenes/first.h"
 #include "../global.h"
 #include "wraptext.h"
 
@@ -236,13 +236,15 @@ namespace yingge
 		{
 			sf::String cs = wrapText(sf::String(s), SCREEN_WIDTH - 50, *yingge::defaultFont, 20);
 			//m_text = sf::Text();
-			m_textBackground.setFillColor(sf::Color(100, 100, 100, 0));
-			m_textBackground.setSize(sf::Vector2f(SCREEN_WIDTH, m_text.getLocalBounds().height + 60));
+			
 			m_text.setString(cs);
 			m_text.setFont(*yingge::defaultFont);
 			m_text.setColor(sf::Color(255, 255, 255, 0));
 			m_text.setCharacterSize(20);
 			m_text.setPosition(20, 20);
+
+			m_textBackground.setFillColor(sf::Color(100, 100, 100, 0));
+			m_textBackground.setSize(sf::Vector2f(SCREEN_WIDTH, m_text.getLocalBounds().height + 50));
 			return true;
 		});
 
