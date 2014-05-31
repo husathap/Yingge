@@ -3,7 +3,7 @@ Yingge
 
 An experimental game engine that exploits the functional programming capability of C++11 and macro definition ability. The engine allows people to create simple point-and-click games. This engine uses macro definition to create a new programming language! For a good example, check out file cs1.h and rm1.h and you will see that there is barely any C++. (They are actually C++ since the preprocessor will turn them into C++ before compilation!) Also check out lang folder's contents to see how the new languages are implemented.
 
-Currently, the engine is in the dogfooding stage. I will be using the engine to create a simple demo game. I will not be putting up much documentation at this point since I will use the dogfooding as a chance to do so.
+Currently, the engine should be ready for general usage. However, it has not been dogfooded. Unfortunately, since I might be getting an internship position soon, I won't have to dogfood the engine.
 
 Etymology
 ---------
