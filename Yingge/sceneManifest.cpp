@@ -1,6 +1,10 @@
+#pragma once
+
 #include "core/sceneNavigation.h"
-#include "scenes/rm1.h"
-#include "scenes/rm2.h"
+
+#include "scenes/trigger.h"
+#include "scenes/room1.h"
+#include "scenes/intro.h"
 
 /* This file is used to register a new scene for the game.
  */
@@ -12,9 +16,10 @@
 ////////////////////////////////////////////////////////////////////
 
 SCENES
-	SCENE(rm1)
-	SCENE(rm2)
-
+	SCENE(Intro)
+	SCENE(Trigger)
+	SCENE(Room1)
+	
 	// ADD NEW SCENES THAT USE IO HERE:
 	// SCENE(example)
 xSCENES

@@ -13,13 +13,17 @@
 #include "scenes/first.h"
 #include "core/io.h"
 #include "setting.h"
+#include "resourceManifest.h"
+#include <SFML/System/Thread.hpp>
 
 using namespace yingge;
 
+bool loadFinished = false;
+
 int main()
 {
-
-	sf::RenderWindow window(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "SFML works!");
+	// Pre-initialization
+	sf::RenderWindow window(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Yingge");
 
 	defaultFont = new sf::Font();
 	defaultFont->loadFromFile("resources/fonts/default.ttf");
@@ -34,19 +38,44 @@ int main()
 
 	session = new Session();
 
-	while (window.isOpen())
+	if (!loadFinished)
 	{
-		sf::Event event;
-		while (window.pollEvent(event))
+		// Draw loading screen stuff here:
+		loadTexture = new sf::Texture();
+		loadSprite = new sf::Sprite();
+
+		loadTexture->loadFromFile("resources/textures/loading.png");
+		loadSprite->setTexture(*loadTexture);
+		loadSprite->setColor(sf::Color::White);
+		loadSprite->setPosition(0, 0);
+
+		window.clear();
+		window.draw(*loadSprite);
+		window.display();
+
+		loadResources();
+		loadFinished = true;
+		
+
+		goto INI_WINDOW;
+	}
+	else
+	{
+INI_WINDOW:
+		while (window.isOpen())
 		{
-			if (event.type == sf::Event::Closed)
+			sf::Event event;
+			while (window.pollEvent(event))
+			{
+				if (event.type == sf::Event::Closed)
+					window.close();
+			}
+
+			// Update the scenes.
+			sceneManager->update(&window);
+			if (!sceneManager->isBusy())
 				window.close();
 		}
-
-		// Update the scenes.
-		sceneManager->update(&window);
-		if (!sceneManager->isBusy())
-			window.close();
 	}
 
 	return 0;

@@ -175,6 +175,7 @@
     <ClInclude Include="core\entity.h" />
     <ClInclude Include="core\entitymanager.h" />
     <ClInclude Include="core\io.h" />
+    <ClInclude Include="resourceManifest.h" />
     <ClInclude Include="core\room.h" />
     <ClInclude Include="core\session.h" />
     <ClInclude Include="core\sessionSetup.h" />
@@ -182,15 +183,10 @@
     <ClInclude Include="core\textButton.h" />
     <ClInclude Include="core\wraptext.h" />
     <ClInclude Include="core\sceneNavigation.h" />
-    <ClInclude Include="scenes\cs1.h" />
     <ClInclude Include="scenes\first.h" />
-    <ClInclude Include="scenes\intro.h" />
-    <ClInclude Include="scenes\rm1.h" />
-    <ClInclude Include="scenes\rm2.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="core\scene.h" />
     <ClInclude Include="core\scenemanager.h" />
-    <ClInclude Include="scenes\test.h" />
     <ClInclude Include="core\jsoncons\error_handler.hpp" />
     <ClInclude Include="core\jsoncons\json.hpp" />
     <ClInclude Include="core\jsoncons\json1.hpp" />
@@ -209,6 +205,9 @@
     <ClInclude Include="lang\common.h" />
     <ClInclude Include="lang\cs.h" />
     <ClInclude Include="lang\rm.h" />
+    <ClInclude Include="scenes\intro.h" />
+    <ClInclude Include="scenes\room1.h" />
+    <ClInclude Include="scenes\trigger.h" />
     <ClInclude Include="setting.h" />
   </ItemGroup>
   <ItemGroup>
@@ -218,24 +217,10 @@
     <Image Include="resources\doge.jpg" />
     <Image Include="resources\pingu.jpg" />
     <Image Include="resources\textures\decision.jpg" />
-    <Image Include="resources\textures\Intro\Slide0.png" />
-    <Image Include="resources\textures\Intro\Slide1.png" />
-    <Image Include="resources\textures\Intro\Slide10.png" />
-    <Image Include="resources\textures\Intro\Slide11.png" />
-    <Image Include="resources\textures\Intro\Slide12.png" />
-    <Image Include="resources\textures\Intro\Slide13.png" />
-    <Image Include="resources\textures\Intro\Slide14.png" />
-    <Image Include="resources\textures\Intro\Slide15.png" />
-    <Image Include="resources\textures\Intro\Slide2.png" />
-    <Image Include="resources\textures\Intro\Slide3.png" />
-    <Image Include="resources\textures\Intro\Slide4.png" />
-    <Image Include="resources\textures\Intro\Slide5.png" />
-    <Image Include="resources\textures\Intro\Slide6.png" />
-    <Image Include="resources\textures\Intro\Slide7.png" />
-    <Image Include="resources\textures\Intro\Slide8.png" />
-    <Image Include="resources\textures\Intro\Slide9.png" />
     <Image Include="resources\textures\IO.png" />
-    <Image Include="resources\textures\nenshi.jpg" />
+    <Image Include="resources\textures\loading.png" />
+    <Image Include="resources\textures\room1.png" />
+    <Image Include="resources\textures\trigger.png" />
     <Image Include="resources\textures\title.jpg" />
   </ItemGroup>
   <ItemGroup>

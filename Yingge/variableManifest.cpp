@@ -11,8 +11,5 @@
 ////////////////////////////////////////////////////////////////////////////////////////
 
 VARIABLES
-	BOOLEAN(DefeatedCrocobirdo)
-	BOOLEAN(DefeatedPyrite)
-	BOOLEAN(DefeatedVug)
-	BOOLEAN(DefeatedYOLOBear)
+	BOOLEAN(trigger)
 xVARIABLES

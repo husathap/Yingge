@@ -10,4 +10,6 @@ namespace yingge
 	std::map<std::string, sf::Texture *> *textures;
 	std::map<std::string, sf::SoundBuffer *> *soundBuffers;
 	Session *session = nullptr;
+	sf::Sprite *loadSprite;
+	sf::Texture *loadTexture;
 }

@@ -36,7 +36,7 @@
 #define IF(cond, b) then([this]() { if(cond) b();
 #define ELSEIF(cond, b) else if (cond) b();
 #define ELSE(b) else b();
-#define xIF })
+#define xIF });
 
 // Here are the keywords for writing texts.
 #define TEXT(t) text(t);

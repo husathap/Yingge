@@ -1,7 +1,6 @@
 #pragma once
 
 #include "../core/scene.h"
-#include "../scenes/cs1.h"
 #include "../scenes/intro.h"
 #include <stdlib.h>
 #include "../core/textButton.h"
@@ -35,10 +34,6 @@ public:
 			yingge::sceneManager->overlayScene(new yingge::IO(false));
 		}
 
-		if (buttonAbout.update(w))
-		{
-		}
-
 		if (buttonExit.update(w))
 		{
 			yingge::sceneManager->exit();
@@ -52,7 +47,6 @@ public:
 		w->draw(titleSprite);
 		w->draw(buttonNewGame);
 		w->draw(buttonContinue);
-		w->draw(buttonAbout);
 		w->draw(buttonExit);
 	}
 
@@ -75,15 +69,9 @@ public:
 		buttonContinue.setCharacterSize(30);
 		buttonContinue.setString("Continue");
 
-		buttonAbout = yingge::textButton();
-		buttonAbout.setFont(*yingge::defaultFont);
-		buttonAbout.setPosition(300, 470);
-		buttonAbout.setCharacterSize(30);
-		buttonAbout.setString("About");
-
 		buttonExit = yingge::textButton();
 		buttonExit.setFont(*yingge::defaultFont);
-		buttonExit.setPosition(300, 500);
+		buttonExit.setPosition(300, 470);
 		buttonExit.setCharacterSize(30);
 		buttonExit.setString("Exit");
 	}

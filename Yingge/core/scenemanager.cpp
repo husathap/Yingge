@@ -1,4 +1,5 @@
 #include "scenemanager.h"
+#include "../global.h"
 
 /* This file contains the logic for SceneManager class. For the
  * documentation of the class, read scenemanager.h.
@@ -62,12 +63,14 @@ namespace yingge
 
 		// Draw the scenes.
 		w->clear();
+
 		unsigned int i = SceneManager::m_scenes.size();
 		while (i >= 1)
 		{
 			SceneManager::m_scenes[i - 1]->draw(w);
 			i--;
 		}
+
 		w->display();
 	}
 

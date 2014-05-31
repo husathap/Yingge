@@ -14,4 +14,7 @@ namespace yingge
 	extern std::map<std::string, sf::Texture *> *textures;
 	extern std::map<std::string, sf::SoundBuffer *> *soundBuffers;
 	extern yingge::Session *session;
+
+	extern sf::Sprite *loadSprite;
+	extern sf::Texture *loadTexture;
 }

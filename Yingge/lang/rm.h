@@ -15,8 +15,10 @@
 #define FUNC(name) void name () {
 #define xFUNC }
 
-#define BIND_W_EVENT(button, ctOrEvent) bindButton(&button, [this]() { yingge::sceneManager->overlayScene(new ctOrEvent()); });
+#define BIND_W_EVENT(button, ctOrEvent) bindButton(&button, [this]() { yingge::sceneManager->overlayScene(yingge::getScene(#ctOrEvent)); });
+#define BIND_W_EVENT_UNREG(button, ctOrEvent) bindButton(&button, [this]() { yingge::sceneManager->overlayScene(new ctOrEvent()); });
 #define BIND_W_FUNC(button, f) bindButton(&button, [this]() { f(); });
+#define BIND_W_NAVIGATE(button, ct) bindButton(&button, [this]() { yingge::sceneManager->replaceScenes(yingge::getScene(#ct)); });
 
 // This define the keyword for readability
 #define iCPP

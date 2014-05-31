@@ -19,6 +19,7 @@ namespace yingge
 
 		Scene *m_newScene = nullptr;	// The pointer for the scene to be added.
 		bool m_clearScenes = false;		// Indicate whether all scenes should be removed or not.
+		bool m_loadMode = false;		// Indicate whether the scene is loading or not.
 
 		static bool m_hasInstance;		// Indicate whether the manager has already been created or not.
 	public:
@@ -28,5 +29,6 @@ namespace yingge
 		void exit();							// Exit the game.
 		bool isBusy();							// Indicate whether the game is busy or not.
 		static SceneManager *getInstance();		// This class is a singleton, so we use this instead of new.
+		void toggleLoadMode();					// Switch on/off the loading mode.
 	};
 }
