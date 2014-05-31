@@ -13,9 +13,4 @@ The name Yingge actually comes from a Taiwanese district. It literally means "Or
 Tips
 ----
 
-The tip here is that when you create a scene and you want to be able to save in or load into the room, you must also "register" it. To do so check out the file scenemanifest.cpp.
-
-Credits and Stuffs
-------------------
-
-I would like to say that I also use other people's stuffs at this point such as the picture of the mayor of Calgary. I will give proper crediting once the dogfooding is done. Some of the stuffs will also be removed as well. If you intend to use my engine for whatever reason you have, make sure to properly source the stuffs.
+The project was created in VS13 and it should work with VS13. The engine should be modified first before importing it into other IDE. It also has no makefiles as well so you should create some if you do not plan to work with IDE.
