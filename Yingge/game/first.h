@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../core/scene.h"
-#include "../scenes/intro.h"
+#include "../game/intro.h"
 #include <stdlib.h>
 #include "../core/textButton.h"
 #include "../setting.h"

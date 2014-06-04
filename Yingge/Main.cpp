@@ -10,7 +10,7 @@
 
 //#include <SFML/Graphics.hpp>
 #include "global.h"
-#include "scenes/first.h"
+#include "game/first.h"
 #include "core/io.h"
 #include "setting.h"
 #include "resourceManifest.h"

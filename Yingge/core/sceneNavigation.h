@@ -8,5 +8,5 @@
 
 namespace yingge 
 {
-	Scene *getScene(std::string name);
+	yingge::Scene *getScene(std::string name);
 }

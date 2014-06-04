@@ -6,6 +6,7 @@
 #include <fstream>
 #include <ctime>
 #include <time.h>
+#include "sessionSetup.h"
 
 namespace yingge
 {
@@ -75,27 +76,42 @@ namespace yingge
 				}
 				else
 				{
+					// Load file.
+
 					jsoncons::json log = jsoncons::json::parse_file("logs/" + std::to_string(i) + ".json");
 
 					delete yingge::session;
 					yingge::session = new yingge::Session();
+					yingge::setVariables(yingge::session);
 
 					jsoncons::json bools = log["booleans"];
-					for (auto b = bools.begin_members(); b != bools.end_members(); ++b)
+					if (bools.size() > 0) 
 					{
-						yingge::session->booleans.insert(std::pair<std::string, bool>(b->name(), b->value().as<bool>()));
+						for (auto b = bools.begin_members(); b != bools.end_members(); ++b)
+						{
+							//yingge::session->booleans.insert(std::pair<std::string, bool>(b->name(), b->value().as<bool>()));
+							yingge::session->booleans.at(b->name()) = b->value().as<bool>();
+						}
 					}
 
 					jsoncons::json numbers = log["numbers"];
-					for (auto n = numbers.begin_members(); n != numbers.end_members(); ++n)
+					if (numbers.size() > 0)
 					{
-						yingge::session->numbers.insert(std::pair<std::string, double>(n->name(), n->value().as<double>()));
+						for (auto n = numbers.begin_members(); n != numbers.end_members(); ++n)
+						{
+							//yingge::session->numbers.insert(std::pair<std::string, double>(n->name(), n->value().as<double>()));
+							yingge::session->numbers.at(n->name()) = n->value().as<double>();
+						}
 					}
 
 					jsoncons::json strings = log["strings"];
-					for (auto s = numbers.begin_members(); s != numbers.end_members(); ++s)
+					if (strings.size() > 0)
 					{
-						yingge::session->strings.insert(std::pair<std::string, std::string>(s->name(), s->value().as<std::string>()));
+						for (auto s = numbers.begin_members(); s != numbers.end_members(); ++s)
+						{
+							//yingge::session->strings.insert(std::pair<std::string, std::string>(s->name(), s->value().as<std::string>()));
+							yingge::session->strings.at(s->name()) = s->value().as<std::string>();
+						}
 					}
 
 					yingge::sceneManager->replaceScenes(getScene(log["scene_name"].as<std::string>()));

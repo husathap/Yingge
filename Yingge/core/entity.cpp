@@ -14,7 +14,6 @@ namespace yingge
 
 		if (stage == 0)
 		{
-			sf::Color c = Entity::getColor();
 			Entity::setColor(sf::Color(c.r, c.g, c.b, 0));
 			stage++;
 		}
@@ -46,5 +45,12 @@ namespace yingge
 				dead = true;
 			}
 		}
+	}
+
+	void Entity::reset()
+	{
+		Entity::stage = 0;
+		sf::Color c = Entity::getColor();
+		Entity::setColor(sf::Color(c.r, c.g, c.b, 255));
 	}
 }

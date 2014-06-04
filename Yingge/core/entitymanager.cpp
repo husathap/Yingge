@@ -59,6 +59,9 @@ namespace yingge
 		{
 			if (EntityManager::m_entities[i]->dead)
 			{
+				EntityManager::m_entities[i]->dead = false;
+				EntityManager::m_entities[i]->deleteRequest = false;
+				EntityManager::m_entities[i]->reset();
 				EntityManager::m_entities.erase(EntityManager::m_entities.begin() + i);
 				i--;
 			}

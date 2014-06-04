@@ -1,5 +1,5 @@
 #include "cutscene.h"
-#include "../scenes/first.h"
+#include "../game/first.h"
 #include "../global.h"
 #include "wraptext.h"
 
@@ -108,11 +108,6 @@ namespace yingge
 			m_entities.remove(key);
 			return true;
 		});
-
-		Cutscene::m_commands.push_back([this]()
-		{
-			return isClicked();
-		});
 	}
 
 	void Cutscene::removeEntity(int ZOrder)
@@ -121,11 +116,6 @@ namespace yingge
 		{
 			m_entities.remove(ZOrder);
 			return true;
-		});
-
-		Cutscene::m_commands.push_back([this]()
-		{
-			return isClicked();
 		});
 	}
 
@@ -192,7 +182,7 @@ namespace yingge
 			m_question.setFont(*yingge::defaultFont);
 			m_question.setPosition(180, 20);
 			m_question.setCharacterSize(30);
-			m_question.setString(que);
+			m_question.setString(wrapText(que, SCREEN_WIDTH - 220, *yingge::defaultFont, 30));
 			m_question.setColor(sf::Color(255, 255, 255, 255));
 
 			float y = SCREEN_HEIGHT / 2;
@@ -235,7 +225,6 @@ namespace yingge
 		Cutscene::m_commands.push_back([this, s]()
 		{
 			sf::String cs = wrapText(sf::String(s), SCREEN_WIDTH - 50, *yingge::defaultFont, 20);
-			//m_text = sf::Text();
 			
 			m_text.setString(cs);
 			m_text.setFont(*yingge::defaultFont);

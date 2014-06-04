@@ -32,5 +32,8 @@ namespace yingge
 		 */
 		bool dead = false;			// Indicate whether the entity should be killed off or not.
 		bool deleteRequest = false; // Send this as a signal to the entity that it should kill itself.
+
+		// This allows the entity to be reused.
+		void reset();
 	};
 }

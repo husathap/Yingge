@@ -175,6 +175,16 @@
     <ClInclude Include="core\entity.h" />
     <ClInclude Include="core\entitymanager.h" />
     <ClInclude Include="core\io.h" />
+    <ClInclude Include="game\bob.h" />
+    <ClInclude Include="game\crocobirdo.h" />
+    <ClInclude Include="game\ending.h" />
+    <ClInclude Include="game\gameover.h" />
+    <ClInclude Include="game\hallway.h" />
+    <ClInclude Include="game\intro.h" />
+    <ClInclude Include="game\roombfbob.h" />
+    <ClInclude Include="game\roombfcrocobirdo.h" />
+    <ClInclude Include="game\roombfyolobear.h" />
+    <ClInclude Include="game\yolobear.h" />
     <ClInclude Include="resourceManifest.h" />
     <ClInclude Include="core\room.h" />
     <ClInclude Include="core\session.h" />
@@ -183,7 +193,7 @@
     <ClInclude Include="core\textButton.h" />
     <ClInclude Include="core\wraptext.h" />
     <ClInclude Include="core\sceneNavigation.h" />
-    <ClInclude Include="scenes\first.h" />
+    <ClInclude Include="game\first.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="core\scene.h" />
     <ClInclude Include="core\scenemanager.h" />
@@ -205,9 +215,8 @@
     <ClInclude Include="lang\common.h" />
     <ClInclude Include="lang\cs.h" />
     <ClInclude Include="lang\rm.h" />
-    <ClInclude Include="scenes\intro.h" />
-    <ClInclude Include="scenes\room1.h" />
-    <ClInclude Include="scenes\trigger.h" />
+    <ClInclude Include="game\room1.h" />
+    <ClInclude Include="game\trigger.h" />
     <ClInclude Include="setting.h" />
   </ItemGroup>
   <ItemGroup>
@@ -216,12 +225,33 @@
   <ItemGroup>
     <Image Include="resources\doge.jpg" />
     <Image Include="resources\pingu.jpg" />
+    <Image Include="resources\textures\algebra.png" />
+    <Image Include="resources\textures\badending.png" />
+    <Image Include="resources\textures\bob.png" />
+    <Image Include="resources\textures\classroom.png" />
+    <Image Include="resources\textures\crocobirdo.png" />
     <Image Include="resources\textures\decision.jpg" />
+    <Image Include="resources\textures\divisor.png" />
+    <Image Include="resources\textures\ending.png" />
+    <Image Include="resources\textures\gameover.png" />
+    <Image Include="resources\textures\hallway.png" />
     <Image Include="resources\textures\IO.png" />
     <Image Include="resources\textures\loading.png" />
+    <Image Include="resources\textures\logic.png" />
+    <Image Include="resources\textures\metropolis.png" />
+    <Image Include="resources\textures\mikepeterson.png" />
+    <Image Include="resources\textures\nile.png" />
+    <Image Include="resources\textures\regina.png" />
     <Image Include="resources\textures\room1.png" />
+    <Image Include="resources\textures\science.png" />
+    <Image Include="resources\textures\statistics.png" />
     <Image Include="resources\textures\trigger.png" />
     <Image Include="resources\textures\title.jpg" />
+    <Image Include="resources\textures\underwater.png" />
+    <Image Include="resources\textures\vsbob.png" />
+    <Image Include="resources\textures\vscrocobirdo.png" />
+    <Image Include="resources\textures\vsyolobear.png" />
+    <Image Include="resources\textures\yolobear.png" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="resources\music\Ganbare.mp3" />

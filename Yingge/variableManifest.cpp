@@ -11,5 +11,9 @@
 ////////////////////////////////////////////////////////////////////////////////////////
 
 VARIABLES
+	NUMBER(reginaScore)
+	BOOLEAN(regina1)
+	BOOLEAN(regina2)
+	BOOLEAN(regina3)
 	BOOLEAN(trigger)
 xVARIABLES

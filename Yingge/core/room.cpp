@@ -1,5 +1,5 @@
 #include "room.h"
-#include "../scenes/first.h"
+#include "../game/first.h"
 #include "io.h"
 
 namespace yingge
