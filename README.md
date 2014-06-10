@@ -3,7 +3,7 @@ Yingge
 
 An experimental game engine that exploits the functional programming capability of C++11 and macro definition ability. The engine allows people to create simple point-and-click games. This engine uses macro definition to create a new programming language! For a good example, check out file cs1.h and rm1.h and you will see that there is barely any C++. (They are actually C++ since the preprocessor will turn them into C++ before compilation!) Also check out lang folder's contents to see how the new languages are implemented.
 
-Currently, the engine should be ready for general usage and it has been dogfooded.
+Currently, the engine should be ready for general usage and it has been dogfooded. The result of the dogfooding is a demo game called Of Math and Romance. The details of the game is provided in demo.md.
 
 Etymology
 ---------
